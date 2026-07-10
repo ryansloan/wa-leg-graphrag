@@ -35,9 +35,16 @@ class Embedder(Protocol):
 class SentenceTransformerEmbedder:
     def __init__(self, model_id: str = "BAAI/bge-small-en-v1.5"):
         from sentence_transformers import SentenceTransformer  # deferred: heavy import
+        from transformers.utils import logging as hf_logging
 
+        hf_logging.disable_progress_bar()  # no "Loading weights" bar on CLI start
         self.model_id = model_id
-        self._model = SentenceTransformer(model_id)
+        try:
+            # cached from a previous run: skip the Hub version check (avoids network
+            # latency and the unauthenticated-request warning on every start)
+            self._model = SentenceTransformer(model_id, local_files_only=True)
+        except Exception:
+            self._model = SentenceTransformer(model_id)  # first run: download
         self.dim = self._model.get_embedding_dimension()
         self._query_prefix = _BGE_QUERY_PREFIX if "bge" in model_id.lower() else ""
         # torch's MPS shader cache is not thread-safe; agents run tools on worker
