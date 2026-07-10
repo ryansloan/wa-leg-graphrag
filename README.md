@@ -117,3 +117,7 @@ is structurally absent from a digest-only substrate. Full transcripts in
   `edge_properties()`); `$distance` only exists on the direct vector-hit stream.
 - The member roster lists chamber-switchers twice under one id, sometimes with
   blank names — ingest dedupes to one member record.
+- torch's MPS (Apple GPU) shader cache is not thread-safe: PydanticAI runs sync
+  tools on worker threads, so a model issuing parallel tool calls can drive
+  concurrent `SentenceTransformer.encode()` calls and segfault the process.
+  The embedder serializes encode behind a lock.

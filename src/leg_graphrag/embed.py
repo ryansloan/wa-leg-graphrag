@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import threading
 from pathlib import Path
 from typing import Protocol
 
@@ -39,12 +40,17 @@ class SentenceTransformerEmbedder:
         self._model = SentenceTransformer(model_id)
         self.dim = self._model.get_embedding_dimension()
         self._query_prefix = _BGE_QUERY_PREFIX if "bge" in model_id.lower() else ""
+        # torch's MPS shader cache is not thread-safe; agents run tools on worker
+        # threads, so concurrent encode() calls segfault without this.
+        self._lock = threading.Lock()
 
     def embed(self, texts: list[str]) -> list[list[float]]:
-        return self._model.encode(texts, normalize_embeddings=True).tolist()
+        with self._lock:
+            return self._model.encode(texts, normalize_embeddings=True).tolist()
 
     def embed_query(self, text: str) -> list[float]:
-        return self._model.encode([self._query_prefix + text], normalize_embeddings=True)[0].tolist()
+        with self._lock:
+            return self._model.encode([self._query_prefix + text], normalize_embeddings=True)[0].tolist()
 
 
 class CachedEmbedder:
@@ -59,19 +65,21 @@ class CachedEmbedder:
         self._cache: dict[str, list[float]] = (
             json.loads(self._path.read_text()) if self._path.exists() else {}
         )
+        self._lock = threading.Lock()
 
     @staticmethod
     def _key(text: str) -> str:
         return hashlib.sha256(text.encode()).hexdigest()
 
     def embed(self, texts: list[str]) -> list[list[float]]:
-        missing = [t for t in texts if self._key(t) not in self._cache]
-        if missing:
-            for text, vec in zip(missing, self._inner.embed(missing)):
-                self._cache[self._key(text)] = vec
-            self._path.parent.mkdir(parents=True, exist_ok=True)
-            self._path.write_text(json.dumps(self._cache))
-        return [self._cache[self._key(t)] for t in texts]
+        with self._lock:
+            missing = [t for t in texts if self._key(t) not in self._cache]
+            if missing:
+                for text, vec in zip(missing, self._inner.embed(missing)):
+                    self._cache[self._key(text)] = vec
+                self._path.parent.mkdir(parents=True, exist_ok=True)
+                self._path.write_text(json.dumps(self._cache))
+            return [self._cache[self._key(t)] for t in texts]
 
     def embed_query(self, text: str) -> list[float]:
         return self._inner.embed_query(text)
