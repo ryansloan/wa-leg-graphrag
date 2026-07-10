@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.helix/
+target/
+*.log
+
+# Data artifacts (regenerate: uv run python -m leg_graphrag.ingest)
+data/
+.env
+
+# macOS
+.DS_Store

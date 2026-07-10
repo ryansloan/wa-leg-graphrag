@@ -1,0 +1,105 @@
+# Eval questions, WA Legislature 2025-26 biennium (bills with floor passage).
+# bucket: semantic  — answerable from digest text alone; the flat control should do fine.
+# bucket: relational — the answer is an edge pattern (sponsorship/vote structure); no
+#                      digest passage encodes it.
+# bucket: hybrid    — semantic lookup to find the bill(s), then traversal to answer.
+#
+# `required`: substrings that must ALL appear in an answer for the auto-check to pass
+# (case-insensitive). Expected values were hand-derived from data/dataset.json and
+# spot-checked against leg.wa.gov; treat auto-scores as a first pass and review results.md.
+
+- id: S1
+  bucket: semantic
+  question: Which bills passed this biennium deal with unemployment insurance?
+  expected: >
+    HB 2264 (unemployment insurance/layoffs), SB 5041 (unemployment insurance for
+    strikes & lockouts), SB 5874 (unemployment info reporting), SB 6134 (striking
+    workers/UI overpayments). Any three of the four is a pass.
+  required: ["5041", "6134", "2264"]
+
+- id: S2
+  bucket: semantic
+  question: What legislation addresses protections or housing stability for residential tenants?
+  expected: HB 1217 (residential tenants / rent stabilization); SB 5937 (smart access systems/tenants) is a bonus.
+  required: ["1217"]
+
+- id: S3
+  bucket: semantic
+  question: Which bills concern artificial intelligence?
+  expected: HB 1170 (AI content notices) and HB 2225 (AI companion chatbots).
+  required: ["1170", "2225"]
+
+- id: S4
+  bucket: semantic
+  question: Is there legislation about student cell phone or mobile device use in schools?
+  expected: Yes — SB 5346 (student mobile device use).
+  required: ["5346"]
+
+- id: R1
+  bucket: relational
+  question: >
+    Which Democratic senators voted Nay on the Senate 3rd Reading & Final Passage
+    of SB 5041?
+  expected: Lisa Wellman and Mike Chapman.
+  required: ["Wellman", "Chapman"]
+
+- id: R2
+  bucket: relational
+  question: Which cosponsors of SB 5041 voted against it on final passage?
+  expected: Lisa Wellman (cosponsored the bill, voted Nay on Senate final passage).
+  required: ["Wellman"]
+
+- id: R3
+  bucket: relational
+  question: >
+    Which Democrats voted Nay on the House final passage of HB 2049, the K-12
+    education funding bill?
+  expected: >
+    Adam Bernbaum, Adison Richards, Alicia Rule, Clyde Shavers, Dave Paul, Joe
+    Timmons, Mari Leavitt, Melanie Morgan, Shelley Kloba (9 members, House
+    3rd Reading & Final Passage).
+  required: ["Bernbaum", "Richards", "Rule", "Shavers", "Paul", "Timmons", "Leavitt", "Morgan", "Kloba"]
+
+- id: R4
+  bucket: relational
+  question: >
+    Did any sponsor of HB 1620 (parenting plan limitations) vote against it on
+    final passage? Who?
+  expected: Yes — cosponsors Roger Goodman and Natasha Hill voted Nay on House final passage.
+  required: ["Goodman", "Hill"]
+
+- id: H1
+  bucket: hybrid
+  question: >
+    Find the major bill about residential rent stabilization and report how close
+    its Senate final passage vote was.
+  expected: HB 1217; Senate final passage was 29 Yea to 20 Nay.
+  required: ["1217", "29", "20"]
+
+- id: H2
+  bucket: hybrid
+  question: >
+    Among bills about the capital gains tax, did any Republican cosponsor one and
+    then vote against it on final passage?
+  expected: Yes — Paul Harris (R) cosponsored SB 5314 and voted Nay on its final passage.
+  required: ["Harris", "5314"]
+
+- id: H3
+  bucket: hybrid
+  question: >
+    Which bills about artificial intelligence had contested (non-unanimous) final
+    passage votes, and what were the House tallies?
+  expected: >
+    HB 1170 (AI content notices), House 56-37; HB 2225 (AI companion chatbots),
+    House 74-21. Both contested.
+  required: ["1170", "2225", "56", "74"]
+
+- id: H4
+  bucket: hybrid
+  question: >
+    Find the bill about allowing alcohol service in public places and list the
+    Democrats who voted Nay on its House final passage.
+  expected: >
+    HB 1515; D Nay votes: Cindy Ryu, Gerry Pollet, Janice Zahn, Lauren Davis, Lisa
+    Callan, Mari Leavitt, Roger Goodman, Sharon Tomiko Santos, Steve Bergquist (9 members).
+  required: ["1515", "Ryu", "Pollet", "Zahn", "Davis", "Callan", "Leavitt", "Goodman", "Santos", "Bergquist"]

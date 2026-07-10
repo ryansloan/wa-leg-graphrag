@@ -1,0 +1,290 @@
+[
+ {
+  "id": "S1",
+  "bucket": "semantic",
+  "question": "Which bills passed this biennium deal with unemployment insurance?",
+  "expected": "HB 2264 (unemployment insurance/layoffs), SB 5041 (unemployment insurance for strikes & lockouts), SB 5874 (unemployment info reporting), SB 6134 (striking workers/UI overpayments). Any three of the four is a pass.",
+  "paths": {
+   "control": {
+    "answer": "Based on the bill digests, several bills addressing unemployment insurance passed during the 2025-26 biennium (all show a \"C ... L ...\" chapter/law status, indicating they were enacted):\n\n1. **SB 5041** \u2013 *Unemployment insurance benefits for striking or lockout workers.* Status: C 352 L 25 (passed in the 2025 session).\n\n2. **SB 6134** \u2013 *Notice to striking workers applying for unemployment insurance benefits of potential overpayment assessment upon receipt of retroactive wages.* Status: C 161 L 26 (passed in the 2026 session).\n\n3. **HB 2264** \u2013 *Unemployment insurance benefits for workers separated from employment as a result of employer-initiated layoffs or workforce reductions.* Status: C 150 L 26 (passed in the 2026 session).\n\n4. **SB 5874** \u2013 *Employers' information reporting for purposes of unemployment compensation.* Status: C 43 L 26 (passed in the 2026 session).\n\nA closely related bill on layoffs (not strictly \"unemployment insurance\" but connected to unemployment/benefits for laid-off workers) also passed:\n\n- **SB 6106** \u2013 Modifies the \"securing timely notification and benefits for laid-off employees act,\" updating the definition of employer and adding a public-disclosure exemption for employee data. Status: C 86 L 26.\n- **SB 5525** \u2013 Protects workers facing employment loss due to business closings or mass layoffs. Status: C 277 L 25.\n\nIf you'd like, I can pull the specific final-passage vote counts and sponsor information for any of these bills.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": true
+   },
+   "graph": {
+    "answer": "Based on my search, here are the bills that passed this biennium dealing directly with unemployment insurance (all show a \"C ... L 25/26\" status, indicating they were signed into law):\n\n1. **SB 5041** \u2013 \"Unemployment insurance benefits for striking or lockout workers\" (C 352 L 25)\n2. **HB 2264** \u2013 \"Unemployment insurance benefits for workers separated from employment as a result of employer-initiated layoffs or workforce reductions\" (C 150 L 26)\n3. **SB 6134** \u2013 \"Notice to striking workers applying for unemployment insurance benefits of potential overpayment assessment upon receipt of retroactive wages\" (C 161 L 26)\n4. **SB 5874** \u2013 \"Employers' information reporting for purposes of unemployment compensation\" (C 43 L 26)\n\nA few related but distinct labor-benefit bills also appeared in the search (e.g., SB 6106 on the laid-off employees notification act, and SB 5525 on business closures/mass layoffs), but these concern layoff notification rather than unemployment insurance benefits specifically \u2014 let me know if you'd like details on those as well, or votes/sponsors for any of the four bills above.",
+    "tool_calls": [
+     "search_bills_semantic"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "S2",
+  "bucket": "semantic",
+  "question": "What legislation addresses protections or housing stability for residential tenants?",
+  "expected": "HB 1217 (residential tenants / rent stabilization); SB 5937 (smart access systems/tenants) is a bonus.",
+  "paths": {
+   "control": {
+    "answer": "Several bills from the 2025-26 Washington State Legislature address protections and housing stability for residential tenants:\n\n**Core tenant protection/housing stability legislation:**\n\n- **HB 1217** \u2013 The most comprehensive bill on this topic. It improves housing stability for tenants under the residential landlord-tenant act and manufactured/mobile home landlord-tenant act by: limiting rent and fee increases, requiring notice of rent/fee increases, limiting fees and deposits, establishing a landlord resource center, authorizing tenant lease termination, creating parity between lease types, and providing for attorney general enforcement. (Status: C 209 L 25 \u2014 signed into law)\n\n**Notice and procedural protections:**\n\n- **HB 2452** \u2013 Modifies requirements for service of rent increase notices. (C 118 L 26)\n- **HB 2664** \u2013 Modifies requirements for service of unlawful detainer notices and related notices. (C 144 L 26)\n- **HB 1003** \u2013 Addresses service of notice by mail in forcible entry and unlawful detainer cases. (C 44 L 25)\n- **SB 5298** \u2013 Concerns notice of sale or lease of manufactured/mobile home communities. (C 205 L 25)\n\n**Access, safety, and habitability:**\n\n- **SB 5937** \u2013 Regulates use of smart access systems in residential rental properties. (C 55 L 26)\n- **SB 6200** \u2013 Allows renters and mobile home occupants to install portable cooling devices. (C 184 L 26)\n- **SB 6237** \u2013 Requires rental property disclosures of flooding history and flood risk. (C 234 L 26)\n\n**Court capacity for eviction cases:**\n\n- **HB 1621** \u2013 Authorizes superior courts to appoint housing court commissioners to address court capacity for unlawful detainer (eviction) actions. (C 268 L 25)\n\n**Related but broader housing bills:**\n\n- **HB 2266** \u2013 Encourages permanent supportive housing, transitional housing, and emergency shelters. (C 232 L 26)\n- **HB 1757** \u2013 Modifies regulations for existing buildings used for residential purposes. (C 203 L 25)\n\nIf you'd like, I can pull sponsor information or roll-call vote details (e.g., Yea/Nay counts, party breakdowns) for any of these bills \u2014 HB 1217 in particular, since it's the flagship tenant-protection bill.",
+    "tool_calls": [
+     "search_bills",
+     "search_bills",
+     "search_bills"
+    ],
+    "auto_pass": true
+   },
+   "graph": {
+    "answer": "The bill most directly on point is **HB 1217** \u2014 \"AN ACT Relating to improving housing stability for tenants subject to the residential landlord-tenant act and the manufactured/mobile home landlord-tenant act.\" It:\n\n- Limits rent and fee increases\n- Requires notice of rent and fee increases\n- Limits fees and deposits\n- Establishes a landlord resource center and associated services\n- Authorizes tenant lease termination\n- Creates parity between lease types\n- Provides for attorney general enforcement\n\nIts status is **C 209 L 25** (signed into law, Chapter 209, Laws of 2025).\n\nA related, narrower bill is **SB 5937** \u2014 \"AN ACT Relating to the use of a smart access system in a residential property subject to the residential landlord-tenant act,\" which regulates keyless/smart-lock entry systems landlords use in tenant units (status: C 55 L 26).\n\nWould you like details on HB 1217's sponsors or the roll-call votes (e.g., Final Passage tally) to see how it passed?",
+    "tool_calls": [
+     "search_bills_semantic"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "S3",
+  "bucket": "semantic",
+  "question": "Which bills concern artificial intelligence?",
+  "expected": "HB 1170 (AI content notices) and HB 2225 (AI companion chatbots).",
+  "paths": {
+   "control": {
+    "answer": "Based on my search, two bills clearly and directly concern artificial intelligence:\n\n1. **HB 1170** \u2013 \"AN ACT Relating to informing users when content is developed or modified by artificial intelligence.\" This bill would require disclosure to users when content has been created or altered by AI. Status: C 167 L 26 (enacted as Chapter 167, Laws of 2026).\n\n2. **HB 2225** \u2013 \"AN ACT Relating to regulation of artificial intelligence companion chatbots.\" This bill regulates AI companion chatbots. Status: C 168 L 26 (enacted as Chapter 168, Laws of 2026).\n\nThe rest of the search results (e.g., SCR 8401, HJM 4001, HB 2113, SB 5937, SB 6025, HCR 4407, SJM 8002, SB 6002) do not substantively relate to artificial intelligence \u2014 they came up due to loose semantic matches but concern unrelated topics like joint rules, memorials, radiologic technologist supervision, landlord-tenant smart locks, fetal death definitions, and license plate readers.\n\nIf you'd like, I can pull sponsor and roll-call vote details for HB 1170 or HB 2225.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": true
+   },
+   "graph": {
+    "answer": "Based on my search of bill digests, two bills directly and explicitly concern artificial intelligence:\n\n1. **HB 1170** \u2013 \"Informing users when content is developed or modified by artificial intelligence.\" This bill requires disclosure to users when content has been created or altered by AI. Status: enacted (C 167 L 26).\n\n2. **HB 2225** \u2013 \"Regulating artificial intelligence companion chatbots.\" This bill sets rules around AI companion chatbot products/services. Status: enacted (C 168 L 26).\n\nI ran additional searches (e.g., \"automated decision making algorithm,\" \"generative AI in education\") but found no other bills substantively about AI \u2014 other near matches (like SB 6002 on automated license plate readers, or various education bills) are not really AI-focused, just tangentially related by keyword similarity. If you'd like, I can pull sponsors and vote details for HB 1170 and HB 2225.",
+    "tool_calls": [
+     "search_bills_semantic",
+     "search_bills_semantic",
+     "search_bills_semantic"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "S4",
+  "bucket": "semantic",
+  "question": "Is there legislation about student cell phone or mobile device use in schools?",
+  "expected": "Yes \u2014 SB 5346 (student mobile device use).",
+  "paths": {
+   "control": {
+    "answer": "Yes \u2014 **SB 5346**, \"AN ACT Relating to student use of mobile devices in public schools,\" directly addresses this topic. It concerns student use of mobile devices in public schools and has a status of \"C 225 L 26\" (chaptered as Chapter 225, Laws of 2026), indicating it passed into law.\n\nNone of the other bills returned are substantively about student phone/device use in schools \u2014 they cover unrelated topics like behavioral health supports (HB 1634), mobile market programs (SB 5214), school transportation (SB 6065, SB 5009), school safety penalties (SB 5272), and other education administration matters.\n\nIf you'd like, I can look up the sponsors and roll-call vote details for SB 5346.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": true
+   },
+   "graph": {
+    "answer": "## SB 5346 \u2014 Student Use of Mobile Devices in Public Schools\n\n**Summary:** This bill addresses student use of mobile devices in public schools. It is now law, enacted as **Chapter 225, Laws of 2026** (current version: SSB 5346).\n\n**Sponsorship:** A broad bipartisan effort led by primary sponsor **Sen. Marko Liias (D)**, with cosponsors from both parties including Sen. Paul Harris (R), Sen. Sharon Shewmake (D), Sen. Perry Dozier (R), Sen. Jessica Bateman (D), Sen. Leonard Christian (R), Sen. Noel Frame (D), Sen. Bob Hasegawa (D), Sen. Curtis King (R), Sen. Deborah Krishnadasan (D), Sen. John Lovick (D), Sen. T'wina Nobles (D), and Sen. Jesse Salomon (D).\n\n**Legislative path & votes:**\n- **Senate, 3rd Reading & Final Passage (2026-02-11):** Passed 37 Yea \u2013 12 Nay\n- **House, Final Passage as Amended by House (2026-03-04):** Passed 63 Yea \u2013 34 Nay \u2013 1 Excused\n- **Senate, Final Passage as Amended by House (2026-03-09):** Concurred 43 Yea \u2013 4 Nay \u2013 2 Excused\n\nThe bill passed with strong support in both chambers, gaining even wider margins after the House amendment came back to the Senate for concurrence \u2014 suggesting the amended version was broadly acceptable across party lines.\n\nIf you'd like, I can pull the full digest text/amendment details or look at which specific members voted against it.",
+    "tool_calls": [
+     "search_bills_semantic",
+     "bill_info",
+     "bill_sponsors",
+     "bill_vote_summary"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "R1",
+  "bucket": "relational",
+  "question": "Which Democratic senators voted Nay on the Senate 3rd Reading & Final Passage of SB 5041?",
+  "expected": "Lisa Wellman and Mike Chapman.",
+  "paths": {
+   "control": {
+    "answer": "I found SB 5041 (unemployment insurance benefits for striking or lockout workers), but my only tool is a semantic search over bill digests/titles/status \u2014 it does not contain roll-call vote data (individual member votes, party breakdowns, or Yea/Nay counts).\n\nI cannot retrieve which specific senators voted Nay on the Final Passage vote for SB 5041, including any Democratic senators, because that data isn't available through the tool I have access to. I don't want to guess names or counts, so I can't answer this question reliably. If a vote-data tool becomes available, I'd be able to look up the exact roll call for you.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": false
+   },
+   "graph": {
+    "answer": "On the Senate 3rd Reading & Final Passage vote for SB 5041, two Democratic senators voted Nay:\n\n- **Mike Chapman** (D-Senate)\n- **Lisa Wellman** (D-Senate)\n\nAll other Nay votes on this motion came from Republican senators.",
+    "tool_calls": [
+     "bill_votes"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "R2",
+  "bucket": "relational",
+  "question": "Which cosponsors of SB 5041 voted against it on final passage?",
+  "expected": "Lisa Wellman (cosponsored the bill, voted Nay on Senate final passage).",
+  "paths": {
+   "control": {
+    "answer": "I don't have access to sponsor lists or roll-call vote data for individual members through my tools \u2014 the search_bills tool only returns bill id, title, digest, and status (as shown above for SB 5041). It does not provide cosponsor names or vote records.\n\nBecause of this limitation, I can't determine which cosponsors of SB 5041 (if any) voted against it on final passage. I don't want to guess member names or vote outcomes without supporting data. If you have access to a roll-call vote source or sponsor list, I'd be happy to help analyze it once that information is available.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": false
+   },
+   "graph": {
+    "answer": "Cross-referencing the cosponsor list with the \"Nay\" votes on final passage of SB 5041, one cosponsor voted against the bill despite having cosponsored it:\n\n- **Lisa Wellman (D-Senate)** \u2014 voted Nay on both \"3rd Reading & Final Passage\" and \"Final Passage as Recommended by Conference Committee.\"\n\nNone of the other listed cosponsors (Riccelli, Conway, Hasegawa, Salda\u00f1a, Salomon, Stanford, Dhingra, Nobles, Trudeau, Valdez, Bateman, Lovelett, Cleveland, Frame, Orwall, Pedersen, Slatter, Wilson) appear among the Nay votes.",
+    "tool_calls": [
+     "bill_sponsors",
+     "bill_votes"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "R3",
+  "bucket": "relational",
+  "question": "Which Democrats voted Nay on the House final passage of HB 2049, the K-12 education funding bill?",
+  "expected": "Adam Bernbaum, Adison Richards, Alicia Rule, Clyde Shavers, Dave Paul, Joe Timmons, Mari Leavitt, Melanie Morgan, Shelley Kloba (9 members, House 3rd Reading & Final Passage).",
+  "paths": {
+   "control": {
+    "answer": "My tool only provides bill digests, titles, and status (semantic search over bill text) \u2014 it does not return roll-call vote data, sponsor lists, or individual member votes. I can confirm that HB 2049 exists (\"Investing in the state's paramount duty to fund K-12 education and build strong and safe communities,\" status: C 404 L 25), but I have no way to retrieve who voted Yea/Nay on its final passage, let alone break that down by party.\n\nI can't answer which Democrats voted Nay on HB 2049's House final passage \u2014 that data isn't accessible with my current tools. If a roll-call vote lookup tool becomes available, I'd be able to answer this precisely.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": false
+   },
+   "graph": {
+    "answer": "On the House Final Passage vote for HB 2049 (\"Investing in the state's paramount duty to fund K-12 education...\"), the following Democrats voted **Nay**:\n\n- Adison Richards (D)\n- Shelley Kloba (D)\n- Dave Paul (D)\n- Mari Leavitt (D)\n- Melanie Morgan (D)\n- Alicia Rule (D)\n- Joe Timmons (D)\n- Clyde Shavers (D)\n- Adam Bernbaum (D)\n\nAll other Nay votes on this motion came from Republican members.",
+    "tool_calls": [
+     "bill_info",
+     "bill_votes"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "R4",
+  "bucket": "relational",
+  "question": "Did any sponsor of HB 1620 (parenting plan limitations) vote against it on final passage? Who?",
+  "expected": "Yes \u2014 cosponsors Roger Goodman and Natasha Hill voted Nay on House final passage.",
+  "paths": {
+   "control": {
+    "answer": "I don't have access to sponsor lists or roll-call vote details for individual bills through my available tools\u2014my search only returns bill title, digest, and status (HB 1620, \"Concerning limitations in parenting plans,\" status: C 166 L 25). I cannot retrieve the list of sponsors or the individual Yea/Nay votes on final passage, so I cannot determine whether any sponsor voted against it.\n\nIf you have access to the legislature's roll-call vote records or sponsor list, I'd be happy to help analyze that data if you provide it.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": false
+   },
+   "graph": {
+    "answer": "Yes. Two of HB 1620's own sponsors voted \"Nay\" on final passage:\n\n- **Roger Goodman (D-House)** \u2014 cosponsor, voted Nay on \"3rd Reading & Final Passage\"\n- **Natasha Hill (D-House)** \u2014 cosponsor, voted Nay on \"3rd Reading & Final Passage\"\n\nThe primary sponsor, Jamila Taylor (D), and cosponsor Julia Reed (D) are not listed among the Nay votes, so it appears they voted Yea (or were not recorded as Nay).",
+    "tool_calls": [
+     "bill_sponsors",
+     "bill_votes"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "H1",
+  "bucket": "hybrid",
+  "question": "Find the major bill about residential rent stabilization and report how close its Senate final passage vote was.",
+  "expected": "HB 1217; Senate final passage was 29 Yea to 20 Nay.",
+  "paths": {
+   "control": {
+    "answer": "The search tool only returns bill digests (title, summary, status) \u2014 it does not provide roll-call vote data, vote counts, or member-level voting records. This means I cannot retrieve the actual Senate final passage vote tally for **HB 1217** (\"AN ACT Relating to improving housing stability for tenants... limiting rent and fee increases...\" \u2014 the residential rent stabilization bill, enacted as **C 209 L 25**).\n\nI can confirm HB 1217 is the major rent stabilization bill you're asking about, but I do not have access to a tool that returns roll-call vote breakdowns (Yea/Nay counts by chamber), so I can't tell you how close the Senate final passage vote was. If you have a tool or source for roll-call data, I'd be happy to analyze it.",
+    "tool_calls": [
+     "search_bills",
+     "search_bills"
+    ],
+    "auto_pass": false
+   },
+   "graph": {
+    "answer": "The major bill on residential rent stabilization is **HB 1217** (\"Improving housing stability for tenants... by limiting rent and fee increases...\"), which became law as Chapter 209, Laws of 2025.\n\n**Senate final passage vote** (Final Passage as Recommended by Conference Committee, April 27, 2025):\n- **Yea: 27**\n- **Nay: 20**\n- **Excused: 1**\n\nThis was a fairly narrow margin \u2014 the bill passed the Senate by just 7 votes. (Note: an earlier Senate vote on its own amended version, \"3rd Reading & Final Passage as Amended by the Senate\" on April 10, 2025, was 29 Yea\u201320 Nay, but the decisive vote sending the bill to the Governor was the conference-committee version, 27\u201320.)",
+    "tool_calls": [
+     "search_bills_semantic",
+     "bill_vote_summary"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "H2",
+  "bucket": "hybrid",
+  "question": "Among bills about the capital gains tax, did any Republican cosponsor one and then vote against it on final passage?",
+  "expected": "Yes \u2014 Paul Harris (R) cosponsored SB 5314 and voted Nay on its final passage.",
+  "paths": {
+   "control": {
+    "answer": "I found the bills most directly related to the capital gains tax (HB 1376, SB 5314, SB 5813), but my only tool is `search_bills`, which returns just the bill ID, title, digest, and status \u2014 it does not return sponsor lists, cosponsor information, or roll-call vote data.\n\nI cannot retrieve information on who cosponsored these bills or how individual legislators voted on final passage, because no tool available to me exposes sponsor rosters or member-level vote records. As a result, I'm unable to determine whether any Republican cosponsored a capital gains tax bill and then voted against it on final passage \u2014 I don't have the data access needed to verify that claim, and I don't want to guess names or vote outcomes.\n\nIf a tool for retrieving bill sponsors and roll-call votes becomes available, I could answer this precisely.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": false
+   },
+   "graph": {
+    "answer": "Yes. On **SB 5314** (\"Modifying the capital gains tax\"), Senator **Paul Harris (R)** was a listed cosponsor, but he voted **Nay** on both final-passage motions (\"3rd Reading & Final Passage\" and \"Final Passage as Amended by the House\").\n\nFor comparison, the other capital-gains-related bill with Republican involvement, **HB 1376** (\"prepayment of capital gains taxes six months prior to the due date\"), was actually a Republican-sponsored bill (primary sponsor Ed Orcutt, R, with cosponsors Mark Klicker, Cyndy Jacobsen, John Ley, and Andrew Barkis, all R) \u2014 all of those cosponsors voted **Yea** on final passage, so no defection there.\n\n**SB 5813** (progressive capital gains/estate tax rate structure) had no Republican cosponsors.\n\nSo the only case of a Republican cosponsoring a capital-gains-tax bill and then voting against it on final passage is Paul Harris on SB 5314.",
+    "tool_calls": [
+     "search_bills_semantic",
+     "bill_sponsors",
+     "bill_sponsors",
+     "bill_sponsors",
+     "bill_votes",
+     "bill_votes"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "H3",
+  "bucket": "hybrid",
+  "question": "Which bills about artificial intelligence had contested (non-unanimous) final passage votes, and what were the House tallies?",
+  "expected": "HB 1170 (AI content notices), House 56-37; HB 2225 (AI companion chatbots), House 74-21. Both contested.",
+  "paths": {
+   "control": {
+    "answer": "I found two bills clearly about artificial intelligence:\n\n- **HB 1170** \u2013 \"Informing users when content is developed or modified by artificial intelligence\" (status: C 167 L 26 \u2014 enacted)\n- **HB 2225** \u2013 \"Regulating artificial intelligence companion chatbots\" (status: C 168 L 26 \u2014 enacted)\n\nHowever, I'm unable to report on which of these had **contested (non-unanimous) final passage votes** or give **House tallies**, because my only available tool (`search_bills`) returns just bill ID, title, digest, and status \u2014 it does not provide roll-call vote data, vote counts, or motion-level detail (e.g., \"Final Passage\" tallies). I don't have a tool to look up individual member votes or chamber tallies, so I can't verify or guess at the numbers.\n\nIf you have access to a vote-lookup tool or can share vote data, I can help analyze it. Otherwise, based on current tools, I can only confirm these two bills as AI-related and enacted, not the contested nature of their final passage votes or the specific House tallies.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": false
+   },
+   "graph": {
+    "answer": "Both AI-related bills in the WA 2025-26 biennium had contested (non-unanimous) final passage votes in the House:\n\n**HB 1170** \u2014 \"Informing users when content is developed or modified by artificial intelligence\"\n- House \"3rd Reading & Final Passage\" (2026-02-13): **56 Yea \u2013 37 Nay \u2013 5 Excused**\n- House \"Final Passage as Amended by the Senate\" (2026-03-11): **55 Yea \u2013 38 Nay \u2013 5 Excused**\n- (Senate final passage was 46-3, also contested but far more lopsided.)\n\n**HB 2225** \u2014 \"Regulating artificial intelligence companion chatbots\"\n- House \"3rd Reading & Final Passage\" (2026-02-17): **69 Yea \u2013 28 Nay \u2013 1 Excused**\n- House \"Final Passage as Amended by the Senate\" (2026-03-11): **74 Yea \u2013 21 Nay \u2013 3 Excused**\n- (Senate final passage was 43-5.)\n\nBoth votes broke largely along party lines, with most Republicans voting Nay on HB 1170 and a smaller but still substantial bloc opposing HB 2225 (e.g., Jim Walsh, Matt Marshall, Andrew Barkis, Jenny Graham voting Nay on both bills in both House votes).\n\nI searched using semantic queries for \"artificial intelligence,\" \"automated decision system/algorithm regulation,\" and \"AI in government/employment,\" and these two bills were the only ones clearly centered on AI regulation that reached House floor votes. I don't have a comprehensive keyword/tag index, so if there are other AI-related bills not surfaced by these searches, I can't confirm their absence with certainty \u2014 but these two account for the AI bills that appeared repeatedly across all queries.",
+    "tool_calls": [
+     "search_bills_semantic",
+     "search_bills_semantic",
+     "search_bills_semantic",
+     "bill_votes",
+     "bill_votes",
+     "bill_vote_summary",
+     "bill_vote_summary"
+    ],
+    "auto_pass": true
+   }
+  }
+ },
+ {
+  "id": "H4",
+  "bucket": "hybrid",
+  "question": "Find the bill about allowing alcohol service in public places and list the Democrats who voted Nay on its House final passage.",
+  "expected": "HB 1515; D Nay votes: Cindy Ryu, Gerry Pollet, Janice Zahn, Lauren Davis, Lisa Callan, Mari Leavitt, Roger Goodman, Sharon Tomiko Santos, Steve Bergquist (9 members).",
+  "paths": {
+   "control": {
+    "answer": "I found the bill: **HB 1515** \u2013 \"AN ACT Relating to modernizing the regulation of alcohol service in public spaces\" (this is the bill about allowing alcohol service in public places; it was enacted as C 361 L 25).\n\nHowever, I'm unable to provide the list of Democrats who voted Nay on its House final passage. My only available tool (`search_bills`) returns bill title, digest, and status \u2014 it does not provide roll-call vote data or member-level voting records. I don't have a tool that can retrieve individual legislator votes, so I can't ground a list of \"Nay\" voters in actual data.\n\nIf you have access to a roll-call/vote-lookup tool, I'd be glad to use it \u2014 but with what's available to me now, I can only confirm the bill itself, not the vote breakdown.",
+    "tool_calls": [
+     "search_bills"
+    ],
+    "auto_pass": false
+   },
+   "graph": {
+    "answer": "**Bill:** HB 1515 \u2013 \"Modernizing the regulation of alcohol service in public spaces\" (enacted as C 361 L 25).\n\nHB 1515 had two House final-passage votes: the original **3rd Reading & Final Passage** and, after Senate amendments, a **Final Passage as Amended by the Senate** vote (the decisive vote that sent it to the Governor).\n\n**Democrats who voted Nay:**\n\n*3rd Reading & Final Passage (original House vote):*\n- Timm Ormsby (D)\n- Steve Bergquist (D)\n- Lisa Callan (D)\n- Mari Leavitt (D)\n- Lauren Davis (D)\n\n*Final Passage as Amended by the Senate (final concurrence vote):*\n- Sharon Tomiko Santos (D)\n- Roger Goodman (D)\n- Cindy Ryu (D)\n- Gerry Pollet (D)\n- Steve Bergquist (D)\n- Lisa Callan (D)\n- Mari Leavitt (D)\n- Lauren Davis (D)\n- Janice Zahn (D)\n\nIf you consider the \"decisive\" House final passage to be the concurrence vote (Final Passage as Amended by the Senate), the Democrats voting Nay were: **Sharon Tomiko Santos, Roger Goodman, Cindy Ryu, Gerry Pollet, Steve Bergquist, Lisa Callan, Mari Leavitt, Lauren Davis, and Janice Zahn.**",
+    "tool_calls": [
+     "search_bills_semantic",
+     "bill_votes"
+    ],
+    "auto_pass": true
+   }
+  }
+ }
+]
