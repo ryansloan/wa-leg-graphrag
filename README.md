@@ -66,6 +66,18 @@ uv run python -m leg_graphrag.eval.run     # both paths, all questions -> eval/r
 
 `--only R1 H2` runs a subset; `--path graph` runs one substrate.
 
+## Ask your own questions
+
+```bash
+uv run leg "which cosponsors of SB 5041 voted against it on final passage?"
+uv run leg --both "who sponsored the rent stabilization bill?"   # compare substrates
+uv run leg --control "..."                                       # control path only
+uv run leg                                                       # interactive REPL with memory
+```
+
+Each answer prints the tool-call trace (`--no-tools` to hide) so you can see the
+traversal chain the agent chose.
+
 ## Layout
 
 ```
