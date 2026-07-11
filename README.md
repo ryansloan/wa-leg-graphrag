@@ -117,6 +117,7 @@ scripts/
   seed_helix.py     # idempotent graph load (rerun after helix restarts)
   hero_viz.py       # generates assets/hero.png from dataset.json
 eval/results.md     # generated eval transcripts + results table
+transcripts/        # agent sessions cited in the blog posts, with audit notes (incl. one documented failure)
 assets/hero.png     # the blog post's hero image (fully data-derived)
 ```
 
