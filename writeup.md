@@ -1,6 +1,9 @@
 # Where flat-vector RAG loses the plot: relational questions about legislation
 
-*One-day build, started and shipped, not finished.*
+*One-day build, started and shipped, not finished. The eval-focused notes below
+grew into the published post,
+["You can do better than retrieval"](https://blog.fullrankllc.com/p/dad0497b-ec4a-4d4f-95c1-7e839b9b8d0e),
+which adds the open-ended strategy case study.*
 
 ## The thesis
 

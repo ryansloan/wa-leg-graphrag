@@ -1,5 +1,8 @@
 # leg-graphrag — graph+vector vs flat-vector RAG on the WA Legislature
 
+Companion repo to the post
+[**"You can do better than retrieval"**](https://blog.fullrankllc.com/p/dad0497b-ec4a-4d4f-95c1-7e839b9b8d0e).
+
 An agent that answers questions about the Washington State Legislature's 2025-26
 biennium — bills, sponsorship, roll-call votes — built to make one contrast legible:
 
@@ -78,6 +81,25 @@ uv run leg                                                       # interactive R
 Each answer prints the tool-call trace (`--no-tools` to hide) so you can see the
 traversal chain the agent chose.
 
+## The graph agent's toolset
+
+Beyond per-bill lookups (`bill_info`, `bill_sponsors`, `bill_vote_summary`,
+`bill_votes`, `member_votes`, `member_sponsorships`, `search_bills_semantic`),
+three design choices came out of watching the agent fail:
+
+- **`survey_bills(query, k=40)`** — a compact wide scan (bill id + digest only) so
+  theme questions start from the landscape instead of k=10 dart throws.
+- **`voting_bloc(bill_ids, vote)` / `party_crossovers(bill_ids)`** — exact cross-bill
+  set operations in code. Early on, the agent intersected large Nay lists in its
+  context window and misattributed real crossover votes to the wrong bill — right
+  names, wrong binding. Relational aggregation now never happens "in the model's head."
+- **`verify_claims(claims)`** — before answering, the agent audits every
+  (member, bill, vote) statement in its draft against the roll-call record and
+  corrects anything that isn't CONFIRMED.
+
+Every tool row is also self-describing (bill id / member name in-content), so
+retrieved rows can't lose their binding to the call that produced them.
+
 ## Layout
 
 ```
@@ -88,9 +110,17 @@ src/leg_graphrag/
   stores/flat.py    # control: numpy cosine over digest vectors
   stores/graph.py   # HelixDB store: seed + traversal/vector query functions
   agent.py          # two PydanticAI agents; same model+prompt, different toolsets
+  cli.py            # `leg` command: one-shot, --both comparison, REPL
   eval/             # questions.yaml, run.py
-scripts/seed_helix.py
+scripts/
+  seed_helix.py     # idempotent graph load (rerun after helix restarts)
+  hero_viz.py       # generates assets/hero.png from dataset.json
+eval/results.md     # generated eval transcripts + results table
+assets/hero.png     # the blog post's hero image (fully data-derived)
 ```
+
+`ANTHROPIC_API_KEY` can also live in a project-root `.env` (gitignored) — the
+eval runner and CLI both load it.
 
 ## Findings
 
@@ -104,6 +134,13 @@ The control abstained (rather than hallucinated) on all 8 relational/hybrid
 failures — usually after correctly finding the bill semantically. The information
 is structurally absent from a digest-only substrate. Full transcripts in
 `eval/results.md`; analysis in `writeup.md`.
+
+Past the eval, the more interesting workload is open-ended strategy questions
+("which legislators should a small-business coalition prioritize for outreach?"),
+where the agent builds a concept from semantic searches, then reads sponsorships
+and caucus-breaking votes across it with the exact aggregation tools — see
+[the blog post](https://blog.fullrankllc.com/p/dad0497b-ec4a-4d4f-95c1-7e839b9b8d0e)
+for a worked example, including where this failed along the way.
 
 ## Gotchas hit along the way (mid-2026)
 
