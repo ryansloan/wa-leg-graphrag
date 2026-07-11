@@ -9,11 +9,16 @@ control has no tool that can see an edge.
 
 from __future__ import annotations
 
+import os
+import subprocess
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from pathlib import Path
 
 from pydantic import BaseModel
 from pydantic_ai import Agent, RunContext
+
+_PROJECT_ROOT = Path(__file__).resolve().parents[2]  # where helix.toml lives
 
 from .embed import Embedder
 from .stores.flat import FlatVectorStore
@@ -45,7 +50,11 @@ INSTRUCTIONS = """You answer questions about the Washington State Legislature, 2
 - Never intersect or aggregate vote lists across bills in your head: use voting_bloc for
   "who opposed/supported all of these" and party_crossovers for caucus-breakers.
 - Before finalizing, run every specific member-voted-X-on-bill-Y statement in your draft
-  through verify_claims and fix anything not CONFIRMED."""
+  through verify_claims and fix anything not CONFIRMED.
+- graph_query is for shapes no curated tool covers (novel traversals, multi-hop patterns).
+  Prefer curated tools where they fit; when an answer leans on a graph_query result,
+  cross-check one sample of it with a curated tool, and never claim something is absent
+  from the data unless the query that would have found it actually ran."""
 
 _MAX_ROWS = 300
 
@@ -221,6 +230,53 @@ def verify_claims(ctx: RunContext[Deps], claims: list[VoteClaim]) -> list[str]:
             actual = "; ".join(f"{r['vote']} — {r['motion']}" for r in mine)
             results.append(f"WRONG: {c.member_name} on {c.bill_id} actually voted: {actual}")
     return results
+
+
+@graph_agent.tool_plain
+def graph_query(expression: str) -> str:
+    """One-shot HelixDB query for shapes the curated tools don't cover. Write a single
+    expression; results come back as JSON keyed by your varAs names.
+
+    Vocabulary (this is the COMPLETE filter/step set — Predicate/Projection/NodeRef are
+    NOT available):
+    - readBatch().varAs("name", <traversal>).returning(["name", ...]) — multiple varAs allowed
+    - g().nWithLabel("Bill"|"Member") then .has(key, value) for equality filters (chain for AND;
+      no substring/OR/comparison filters exist)
+    - .inE()/.outE() then ALWAYS .edgeHasLabel("VOTED"|"SPONSORED") (the inE("VOTED") label
+      argument does NOT filter), then .edgeHas(key, value) to filter edge properties
+    - .otherN() hops from edges to the node on the far side; chains for multi-hop
+    - .valueMap([...]) and .groupCount(key) work on NODES only; on edge streams use
+      .edgeProperties() (rows include the denormalized bill_id / member_name / party)
+    - .count(), .limit(n) — use limit; output is truncated past ~6000 chars
+
+    Worked examples (all tested):
+    - Members per party:
+      readBatch().varAs("t", g().nWithLabel("Member").groupCount("party")).returning(["t"])
+    - Democratic Nay votes on a bill:
+      readBatch().varAs("v", g().nWithLabel("Bill").has("bill_id", "SB 5041").inE()
+        .edgeHasLabel("VOTED").edgeHas("vote", "Nay").edgeHas("party", "D")
+        .edgeProperties()).returning(["v"])
+    - Two-hop, everyone who co-sponsors bills with a member:
+      readBatch().varAs("co", g().nWithLabel("Member").has("name", "Adison Richards")
+        .outE().edgeHasLabel("SPONSORED").otherN().inE().edgeHasLabel("SPONSORED")
+        .edgeProperties()).returning(["co"])
+
+    Edge properties: VOTED {vote, motion, sequence_number, vote_date, chamber, bill_id,
+    member_name, party}; SPONSORED {role: primary|cosponsor, order, bill_id, member_name,
+    party}. Bill nodes: bill_number, bill_id, title, digest, status. Member nodes:
+    member_id, name, last_name, chamber, party, district."""
+    proc = subprocess.run(
+        ["helix", "query", "dev", "-e", expression],
+        cwd=_PROJECT_ROOT, capture_output=True, text=True, timeout=60,
+        env={**os.environ, "HELIX_SKIP_CLOUD_AUTH": "1"},
+    )
+    out = proc.stdout.strip()
+    if proc.returncode != 0 or not out:
+        err = (proc.stderr or proc.stdout).strip()[-1200:]
+        return f"QUERY FAILED — fix the expression and retry. {err}"
+    if len(out) > 6000:
+        return out[:6000] + f"\n... truncated ({len(out)} chars total; add .limit() or filters)"
+    return out
 
 
 def run_control(question: str, deps: Deps):
