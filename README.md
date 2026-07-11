@@ -160,3 +160,8 @@ blog post for a worked example, including where this failed along the way.
   tools on worker threads, so a model issuing parallel tool calls can drive
   concurrent `SentenceTransformer.encode()` calls and segfault the process.
   The embedder serializes encode behind a lock.
+- WSL motion names nest: filtering motions by the substring "Final Passage" also
+  matches the procedural "Motion to Place Measure on 3rd Reading & Final Passage"
+  (a scheduling vote, not passage). A member can appear to vote "both ways" on
+  final passage of one bill unless you check the motion text. We verified every
+  figure in the blog posts is identical under strict and substring definitions.

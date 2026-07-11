@@ -33,7 +33,10 @@ INSTRUCTIONS = """You answer questions about the Washington State Legislature, 2
 - If your tools cannot retrieve the information a question needs, say so plainly and answer
   with what you can support. Do not guess member names, vote counts, or bill numbers.
 - Party is "D" or "R"; chambers are "House" and "Senate"; votes are Yea/Nay/Absent/Excused.
-- A bill's decisive votes are the motions containing "Final Passage".
+- A bill's decisive votes are the motions containing "Final Passage" — but note the
+  procedural "Motion to Place Measure on 3rd Reading & Final Passage" also matches that
+  substring. It is a scheduling vote, not passage: when a member appears to vote both
+  ways on a bill's final passage, check the motion text before drawing conclusions.
 - Distinguish three kinds of claims, and label the second two:
   facts from tool results (state plainly); inferences from vote patterns (mark as
   inference: "the flip suggests...", never motive-as-fact); and background knowledge
