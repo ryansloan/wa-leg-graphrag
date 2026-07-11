@@ -22,3 +22,5 @@ data/
 # local drafts & transcripts (not part of the published repo)
 turn*.md
 blog*.md
+writeup.md
+design.md

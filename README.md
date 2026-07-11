@@ -135,7 +135,7 @@ eval runner and CLI both load it.
 The control abstained (rather than hallucinated) on all 8 relational/hybrid
 failures — usually after correctly finding the bill semantically. The information
 is structurally absent from a digest-only substrate. Full transcripts in
-`eval/results.md`; analysis in `writeup.md`.
+`eval/results.md`.
 
 Past the eval, the more interesting workload is open-ended strategy questions
 ("which legislators should a small-business coalition prioritize for outreach?"),
