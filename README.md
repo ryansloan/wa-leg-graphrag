@@ -1,7 +1,8 @@
 # leg-graphrag — graph+vector vs flat-vector RAG on the WA Legislature
 
-Companion repo to the post
-[**"You can do better than retrieval"**](https://blog.fullrankllc.com/p/dad0497b-ec4a-4d4f-95c1-7e839b9b8d0e).
+Companion repo to the post **"You can do better than retrieval"**.
+<!-- TODO: link the post once published -->
+
 
 An agent that answers questions about the Washington State Legislature's 2025-26
 biennium — bills, sponsorship, roll-call votes — built to make one contrast legible:
@@ -138,9 +139,9 @@ is structurally absent from a digest-only substrate. Full transcripts in
 Past the eval, the more interesting workload is open-ended strategy questions
 ("which legislators should a small-business coalition prioritize for outreach?"),
 where the agent builds a concept from semantic searches, then reads sponsorships
-and caucus-breaking votes across it with the exact aggregation tools — see
-[the blog post](https://blog.fullrankllc.com/p/dad0497b-ec4a-4d4f-95c1-7e839b9b8d0e)
-for a worked example, including where this failed along the way.
+and caucus-breaking votes across it with the exact aggregation tools — see the
+blog post for a worked example, including where this failed along the way.
+<!-- TODO: link the post once published -->
 
 ## Gotchas hit along the way (mid-2026)
 
