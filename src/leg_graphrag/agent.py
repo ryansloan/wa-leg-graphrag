@@ -56,10 +56,15 @@ def _cap(rows: list, limit: int = _MAX_ROWS) -> list:
     return rows
 
 
+# pydantic-ai defaults Anthropic max_tokens to 4096, which extended thinking plus a
+# long answer can exhaust — the reply then truncates mid-sentence (finish reason
+# "length"). Raise the ceiling well above any real answer.
+_SETTINGS = {"max_tokens": 32768}
+
 control_agent = Agent(MODEL, instructions=INSTRUCTIONS, deps_type=Deps, name="control",
-                      defer_model_check=True)
+                      defer_model_check=True, model_settings=_SETTINGS)
 graph_agent = Agent(MODEL, instructions=INSTRUCTIONS, deps_type=Deps, name="graph",
-                    defer_model_check=True)
+                    defer_model_check=True, model_settings=_SETTINGS)
 
 
 @control_agent.tool

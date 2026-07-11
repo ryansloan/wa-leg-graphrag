@@ -44,7 +44,7 @@ def _ask(agent, question: str, deps: Deps, history=None):
 
 def _print_tools(result) -> None:
     calls = []
-    for msg in result.all_messages():
+    for msg in result.new_messages():  # this turn only — all_messages() re-shows REPL history
         for part in getattr(msg, "parts", []):
             if getattr(part, "part_kind", "") == "tool-call":
                 args = part.args if isinstance(part.args, str) else json.dumps(part.args)
