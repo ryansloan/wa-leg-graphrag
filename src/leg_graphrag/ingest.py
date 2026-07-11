@@ -81,10 +81,14 @@ def build_dataset(biennium: str) -> dict:
         bills.append({k: raw[k] for k in (
             "bill_number", "bill_id", "current_version_id", "title", "digest",
             "short_description", "status")})
+        seen_sponsors: set[int] = set()
         for s in raw["sponsors"]:
             member_id = int(s["id"])
             if member_id not in known_ids:
                 continue  # e.g. committee-sponsored bills list the committee
+            if member_id in seen_sponsors:
+                continue  # the API repeats the sponsor list once per bill version
+            seen_sponsors.add(member_id)
             sponsorships.append({
                 "bill_number": raw["bill_number"],
                 "member_id": member_id,

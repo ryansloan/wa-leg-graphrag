@@ -29,35 +29,33 @@ Auto-scored by required-substring check; see per-question transcripts below.
 
 tools: search_bills
 
-> Based on the bill digests, several bills addressing unemployment insurance passed during the 2025-26 biennium (all show a "C ... L ..." chapter/law status, indicating they were enacted):
+> Based on the tool results, several bills that passed this biennium (each shows a "C ___ L 25/26" chapter-law status, indicating enactment) deal directly with unemployment insurance:
 > 
-> 1. **SB 5041** – *Unemployment insurance benefits for striking or lockout workers.* Status: C 352 L 25 (passed in the 2025 session).
+> - **SB 5041** – Unemployment insurance benefits for striking or lockout workers (status: C 352 L 25)
+> - **SB 6134** – Notice to striking workers applying for unemployment insurance benefits about potential overpayment assessment upon receipt of retroactive wages (status: C 161 L 26)
+> - **HB 2264** – Unemployment insurance benefits for workers separated due to employer-initiated layoffs or workforce reductions (status: C 150 L 26)
+> - **SB 5874** – Employers' information reporting requirements for unemployment compensation purposes (status: C 43 L 26)
 > 
-> 2. **SB 6134** – *Notice to striking workers applying for unemployment insurance benefits of potential overpayment assessment upon receipt of retroactive wages.* Status: C 161 L 26 (passed in the 2026 session).
+> Two related but more tangential bills also appeared in the search — **SB 6106** (laid-off employees notification act) and **SB 5525** (business closures/mass layoffs protections) — these concern worker layoff notifications rather than unemployment insurance benefits directly, so I'd flag them as adjacent topics rather than core UI bills.
 > 
-> 3. **HB 2264** – *Unemployment insurance benefits for workers separated from employment as a result of employer-initiated layoffs or workforce reductions.* Status: C 150 L 26 (passed in the 2026 session).
-> 
-> 4. **SB 5874** – *Employers' information reporting for purposes of unemployment compensation.* Status: C 43 L 26 (passed in the 2026 session).
-> 
-> A closely related bill on layoffs (not strictly "unemployment insurance" but connected to unemployment/benefits for laid-off workers) also passed:
-> 
-> - **SB 6106** – Modifies the "securing timely notification and benefits for laid-off employees act," updating the definition of employer and adding a public-disclosure exemption for employee data. Status: C 86 L 26.
-> - **SB 5525** – Protects workers facing employment loss due to business closings or mass layoffs. Status: C 277 L 25.
-> 
-> If you'd like, I can pull the specific final-passage vote counts and sponsor information for any of these bills.
+> If you'd like, I can pull the specific final-passage vote counts and sponsors for any of these bills.
 
 ### graph — pass
 
 tools: search_bills_semantic
 
-> Based on my search, here are the bills that passed this biennium dealing directly with unemployment insurance (all show a "C ... L 25/26" status, indicating they were signed into law):
+> Based on the semantic search of bill digests, the following bills that passed this biennium directly concern unemployment insurance (all have "C ... L 25/26" status, indicating they were enacted into law):
 > 
-> 1. **SB 5041** – "Unemployment insurance benefits for striking or lockout workers" (C 352 L 25)
-> 2. **HB 2264** – "Unemployment insurance benefits for workers separated from employment as a result of employer-initiated layoffs or workforce reductions" (C 150 L 26)
-> 3. **SB 6134** – "Notice to striking workers applying for unemployment insurance benefits of potential overpayment assessment upon receipt of retroactive wages" (C 161 L 26)
-> 4. **SB 5874** – "Employers' information reporting for purposes of unemployment compensation" (C 43 L 26)
+> 1. **SB 5041** — "Concerning unemployment insurance benefits for striking or lockout workers." (Chapter 352, Laws of 2025)
+> 2. **SB 6134** — "Concerning notice to striking workers applying for unemployment insurance benefits of potential overpayment assessment upon receipt of retroactive wages." (Chapter 161, Laws of 2026)
+> 3. **HB 2264** — "Concerning unemployment insurance benefits for workers separated from employment as a result of employer-initiated layoffs or workforce reductions." (Chapter 150, Laws of 2026)
+> 4. **SB 5874** — "Concerning employers' information reporting for purposes of unemployment compensation." (Chapter 43, Laws of 2026)
 > 
-> A few related but distinct labor-benefit bills also appeared in the search (e.g., SB 6106 on the laid-off employees notification act, and SB 5525 on business closures/mass layoffs), but these concern layoff notification rather than unemployment insurance benefits specifically — let me know if you'd like details on those as well, or votes/sponsors for any of the four bills above.
+> A few related but adjacent bills also passed, touching on layoffs/notification rather than UI benefits specifically — I'd flag these as related but not core "unemployment insurance" bills:
+> - **SB 6106** — modifies the "laid-off employees act" (WARN-type notification law), Chapter 86, Laws of 2026
+> - **SB 5525** — "protecting workers facing employment loss due to businesses closing or mass layoffs," Chapter 277, Laws of 2025
+> 
+> If you'd like, I can pull sponsors and final-passage vote tallies for any of these bills.
 
 ## S2 (semantic)
 
@@ -67,57 +65,51 @@ tools: search_bills_semantic
 
 ### control — pass
 
-tools: search_bills, search_bills, search_bills
+tools: search_bills, search_bills
 
-> Several bills from the 2025-26 Washington State Legislature address protections and housing stability for residential tenants:
+> Several bills in the 2025-26 Washington biennium address tenant protections and housing stability:
 > 
-> **Core tenant protection/housing stability legislation:**
+> **Core tenant protection / housing stability legislation:**
 > 
-> - **HB 1217** – The most comprehensive bill on this topic. It improves housing stability for tenants under the residential landlord-tenant act and manufactured/mobile home landlord-tenant act by: limiting rent and fee increases, requiring notice of rent/fee increases, limiting fees and deposits, establishing a landlord resource center, authorizing tenant lease termination, creating parity between lease types, and providing for attorney general enforcement. (Status: C 209 L 25 — signed into law)
+> - **HB 1217** – "Improving housing stability for tenants subject to the residential landlord-tenant act and the manufactured/mobile home landlord-tenant act." This is the most directly on-point bill: it limits rent and fee increases, requires notice of rent/fee increases, limits fees and deposits, establishes a landlord resource center, authorizes tenant lease termination, creates parity between lease types, and provides for attorney general enforcement. Status: enacted (C 209 L 25).
 > 
-> **Notice and procedural protections:**
+> **Related/adjacent bills:**
 > 
-> - **HB 2452** – Modifies requirements for service of rent increase notices. (C 118 L 26)
-> - **HB 2664** – Modifies requirements for service of unlawful detainer notices and related notices. (C 144 L 26)
-> - **HB 1003** – Addresses service of notice by mail in forcible entry and unlawful detainer cases. (C 44 L 25)
-> - **SB 5298** – Concerns notice of sale or lease of manufactured/mobile home communities. (C 205 L 25)
+> - **HB 2452** – Modifies requirements for service of rent increase notices. Status: C 118 L 26.
+> - **SB 5298** – Concerns notice of sale or lease of manufactured/mobile home communities (protects residents of mobile home parks when the community changes hands). Status: C 205 L 25.
+> - **SB 5937** – Concerns use of a "smart access system" (e.g., keyless/smart locks) in residential property subject to the residential landlord-tenant act. Status: C 55 L 26.
+> - **HB 1003** – Addresses service of notice by mail in forcible entry/detainer (eviction) cases, a procedural protection in eviction proceedings. Status: C 44 L 25.
+> - **HB 1621** – Authorizes superior courts to appoint housing court commissioners to address court capacity for unlawful detainer (eviction) actions — relevant to how quickly/fairly eviction cases move through courts. Status: C 268 L 25.
 > 
-> **Access, safety, and habitability:**
+> **Not primarily tenant-protection but touching housing supply/affordability** (surfaced by search but more tangential): HB 1494 (property tax exemption for multi-unit housing), HB 1757 (regulations for existing residential buildings), HB 2266 (permanent supportive/transitional/emergency housing), HB 1096 (lot splitting for housing options), HB 1403/HB 2304 (condominium construction/warranty statutes).
 > 
-> - **SB 5937** – Regulates use of smart access systems in residential rental properties. (C 55 L 26)
-> - **SB 6200** – Allows renters and mobile home occupants to install portable cooling devices. (C 184 L 26)
-> - **SB 6237** – Requires rental property disclosures of flooding history and flood risk. (C 234 L 26)
-> 
-> **Court capacity for eviction cases:**
-> 
-> - **HB 1621** – Authorizes superior courts to appoint housing court commissioners to address court capacity for unlawful detainer (eviction) actions. (C 268 L 25)
-> 
-> **Related but broader housing bills:**
-> 
-> - **HB 2266** – Encourages permanent supportive housing, transitional housing, and emergency shelters. (C 232 L 26)
-> - **HB 1757** – Modifies regulations for existing buildings used for residential purposes. (C 203 L 25)
-> 
-> If you'd like, I can pull sponsor information or roll-call vote details (e.g., Yea/Nay counts, party breakdowns) for any of these bills — HB 1217 in particular, since it's the flagship tenant-protection bill.
+> If you want, I can pull the specific "Final Passage" roll-call votes and sponsor information for HB 1217 (the flagship tenant-stability bill) or any of the others — just let me know which bill(s) to drill into.
 
 ### graph — pass
 
-tools: search_bills_semantic
+tools: search_bills_semantic, search_bills_semantic, search_bills_semantic
 
-> The bill most directly on point is **HB 1217** — "AN ACT Relating to improving housing stability for tenants subject to the residential landlord-tenant act and the manufactured/mobile home landlord-tenant act." It:
+> Based on my search of the bill database, several pieces of 2025-26 Washington legislation address tenant protections and housing stability:
 > 
-> - Limits rent and fee increases
-> - Requires notice of rent and fee increases
-> - Limits fees and deposits
-> - Establishes a landlord resource center and associated services
-> - Authorizes tenant lease termination
-> - Creates parity between lease types
-> - Provides for attorney general enforcement
+> **Most directly on-point:**
 > 
-> Its status is **C 209 L 25** (signed into law, Chapter 209, Laws of 2025).
+> - **HB 1217** – *"Improving housing stability for tenants subject to the residential landlord-tenant act and the manufactured/mobile home landlord-tenant act."* This is the centerpiece bill: it limits rent and fee increases, requires notice of rent/fee increases, limits fees and deposits, establishes a landlord resource center, authorizes tenant lease termination in certain circumstances, creates parity between lease types, and provides for attorney general enforcement. Status: Chapter 209, Laws of 2025 (enacted).
 > 
-> A related, narrower bill is **SB 5937** — "AN ACT Relating to the use of a smart access system in a residential property subject to the residential landlord-tenant act," which regulates keyless/smart-lock entry systems landlords use in tenant units (status: C 55 L 26).
+> **Related, narrower tenant/landlord-tenant-act bills:**
 > 
-> Would you like details on HB 1217's sponsors or the roll-call votes (e.g., Final Passage tally) to see how it passed?
+> - **SB 5937** – Concerning use of "smart access systems" (e.g., keyless/electronic entry) in residential rental properties. Status: Chapter 55, Laws of 2026.
+> - **HB 2452** – Modifies requirements for service of rent increase notices. Status: Chapter 118, Laws of 2026.
+> - **SB 5298** – Concerns notice requirements for sale or lease of manufactured/mobile home communities (protects manufactured-home tenants facing park sales). Status: Chapter 205, Laws of 2025.
+> - **HB 1003** – Addresses service of notice by mail in forcible entry/unlawful detainer (eviction) cases. Status: Chapter 44, Laws of 2025.
+> - **SB 6237** – Requires rental property disclosures of flooding history and flood risk. Status: Chapter 234, Laws of 2026.
+> 
+> **Adjacent housing-stability measures (not landlord-tenant law per se, but related to housing stability):**
+> 
+> - **HB 2266** – Encourages permanent supportive housing, transitional housing, and emergency shelters. Status: Chapter 232, Laws of 2026.
+> - **HB 1494** – Property tax exemption for new/rehabilitated multi-unit dwellings in urban centers. Status: Chapter 164, Laws of 2025.
+> - **SB 5938** – Concerns a "foreclosure prevention fee" (homeownership stability, not rental tenancy). Status: Chapter 156, Laws of 2026.
+> 
+> If you'd like, I can pull sponsor lists and floor (Final Passage) vote breakdowns for any of these — HB 1217 in particular, since it's the primary tenant-protection bill — to show which legislators supported or opposed it.
 
 ## S3 (semantic)
 
@@ -127,29 +119,28 @@ tools: search_bills_semantic
 
 ### control — pass
 
-tools: search_bills
+tools: search_bills, search_bills, search_bills
 
-> Based on my search, two bills clearly and directly concern artificial intelligence:
+> Based on my searches, two bills in the dataset directly and substantively concern artificial intelligence:
 > 
-> 1. **HB 1170** – "AN ACT Relating to informing users when content is developed or modified by artificial intelligence." This bill would require disclosure to users when content has been created or altered by AI. Status: C 167 L 26 (enacted as Chapter 167, Laws of 2026).
+> 1. **HB 1170** — "Relating to informing users when content is developed or modified by artificial intelligence." Requires disclosure when content is AI-generated or AI-modified. Status: C 167 L 26 (signed into law).
 > 
-> 2. **HB 2225** – "AN ACT Relating to regulation of artificial intelligence companion chatbots." This bill regulates AI companion chatbots. Status: C 168 L 26 (enacted as Chapter 168, Laws of 2026).
+> 2. **HB 2225** — "Relating to regulation of artificial intelligence companion chatbots." Regulates AI companion chatbots. Status: C 168 L 26 (signed into law).
 > 
-> The rest of the search results (e.g., SCR 8401, HJM 4001, HB 2113, SB 5937, SB 6025, HCR 4407, SJM 8002, SB 6002) do not substantively relate to artificial intelligence — they came up due to loose semantic matches but concern unrelated topics like joint rules, memorials, radiologic technologist supervision, landlord-tenant smart locks, fetal death definitions, and license plate readers.
+> Other results returned by my searches (e.g., SB 6002 on automated license plate readers, SB 5937 on smart access systems, SCR 8401 on joint rules) mention automation or technology but are not substantively about artificial intelligence — I'm excluding them as not on-topic.
 > 
-> If you'd like, I can pull sponsor and roll-call vote details for HB 1170 or HB 2225.
+> If you'd like, I can pull the sponsor lists and roll-call vote details (including any Final Passage votes) for HB 1170 and HB 2225.
 
 ### graph — pass
 
 tools: search_bills_semantic, search_bills_semantic, search_bills_semantic
 
-> Based on my search of bill digests, two bills directly and explicitly concern artificial intelligence:
+> Based on my search of the bill database, two bills clearly and specifically concern artificial intelligence:
 > 
-> 1. **HB 1170** – "Informing users when content is developed or modified by artificial intelligence." This bill requires disclosure to users when content has been created or altered by AI. Status: enacted (C 167 L 26).
+> 1. **HB 1170** — "Informing users when content is developed or modified by artificial intelligence." Status: Chaptered (C 167 L 26).
+> 2. **HB 2225** — "Regulating artificial intelligence companion chatbots." Status: Chaptered (C 168 L 26).
 > 
-> 2. **HB 2225** – "Regulating artificial intelligence companion chatbots." This bill sets rules around AI companion chatbot products/services. Status: enacted (C 168 L 26).
-> 
-> I ran additional searches (e.g., "automated decision making algorithm," "generative AI in education") but found no other bills substantively about AI — other near matches (like SB 6002 on automated license plate readers, or various education bills) are not really AI-focused, just tangentially related by keyword similarity. If you'd like, I can pull sponsors and vote details for HB 1170 and HB 2225.
+> I ran additional searches on related themes (automated decision systems, generative AI in schools) but did not find other bills that are substantively about AI — the other results returned were unrelated (e.g., driver privacy/license plate readers, radiologic technologist supervision, education efficiency bills) or only tangentially matched on keywords. If there are other AI-related bills in the dataset that didn't surface with these queries, I don't have a way to guarantee completeness beyond semantic search, so I'd recommend a follow-up search with different terms (e.g., "deepfake," "machine learning," "facial recognition") if you want broader coverage.
 
 ## S4 (semantic)
 
@@ -161,30 +152,31 @@ tools: search_bills_semantic, search_bills_semantic, search_bills_semantic
 
 tools: search_bills
 
-> Yes — **SB 5346**, "AN ACT Relating to student use of mobile devices in public schools," directly addresses this topic. It concerns student use of mobile devices in public schools and has a status of "C 225 L 26" (chaptered as Chapter 225, Laws of 2026), indicating it passed into law.
+> Yes — **SB 5346**, "AN ACT Relating to student use of mobile devices in public schools," directly addresses this topic. According to the digest, it concerns student use of mobile devices in public schools. Its status shows it was enacted as **Chapter 225, Laws of 2026 (C 225 L 26)**.
 > 
-> None of the other bills returned are substantively about student phone/device use in schools — they cover unrelated topics like behavioral health supports (HB 1634), mobile market programs (SB 5214), school transportation (SB 6065, SB 5009), school safety penalties (SB 5272), and other education administration matters.
-> 
-> If you'd like, I can look up the sponsors and roll-call vote details for SB 5346.
+> I don't have further details from my tools (e.g., sponsor names, specific provisions, or roll-call vote counts) on this bill. If you'd like, I can search for its floor vote/roll-call results specifically.
 
 ### graph — pass
 
-tools: search_bills_semantic, bill_info, bill_sponsors, bill_vote_summary
+tools: search_bills_semantic, bill_sponsors, bill_vote_summary
 
 > ## SB 5346 — Student Use of Mobile Devices in Public Schools
 > 
-> **Summary:** This bill addresses student use of mobile devices in public schools. It is now law, enacted as **Chapter 225, Laws of 2026** (current version: SSB 5346).
+> **Summary:** "Addressing student use of mobile devices in public schools." (Full bill text/policy details beyond this digest aren't available in my tools — for specifics on what the law actually requires, e.g. bans, exceptions, or district policy mandates, you'd want to check the enrolled bill text directly.)
 > 
-> **Sponsorship:** A broad bipartisan effort led by primary sponsor **Sen. Marko Liias (D)**, with cosponsors from both parties including Sen. Paul Harris (R), Sen. Sharon Shewmake (D), Sen. Perry Dozier (R), Sen. Jessica Bateman (D), Sen. Leonard Christian (R), Sen. Noel Frame (D), Sen. Bob Hasegawa (D), Sen. Curtis King (R), Sen. Deborah Krishnadasan (D), Sen. John Lovick (D), Sen. T'wina Nobles (D), and Sen. Jesse Salomon (D).
+> **Status:** Chaptered as **Chapter 225, Laws of 2026** — the bill passed and was signed into law.
 > 
-> **Legislative path & votes:**
-> - **Senate, 3rd Reading & Final Passage (2026-02-11):** Passed 37 Yea – 12 Nay
-> - **House, Final Passage as Amended by House (2026-03-04):** Passed 63 Yea – 34 Nay – 1 Excused
-> - **Senate, Final Passage as Amended by House (2026-03-09):** Concurred 43 Yea – 4 Nay – 2 Excused
+> **Primary sponsor:** Sen. Marko Liias (D)
+> **Cosponsors:** Paul Harris (R), Sharon Shewmake (D), Perry Dozier (R), Jessica Bateman (D), Leonard Christian (R), Noel Frame (D), Bob Hasegawa (D), Curtis King (R), Deborah Krishnadasan (D), John Lovick (D), T'wina Nobles (D), Jesse Salomon (D) — a bipartisan cosponsor list.
 > 
-> The bill passed with strong support in both chambers, gaining even wider margins after the House amendment came back to the Senate for concurrence — suggesting the amended version was broadly acceptable across party lines.
+> **Decisive votes (Final Passage):**
+> - **Senate**, original 3rd Reading & Final Passage (2026-02-11): Yea 37 – Nay 12
+> - **House**, Final Passage as Amended by the House (2026-03-04): Yea 63 – Nay 34, Excused 1
+> - **Senate**, Final Passage as Amended by the House (concurrence, 2026-03-09): Yea 43 – Nay 4, Excused 2
 > 
-> If you'd like, I can pull the full digest text/amendment details or look at which specific members voted against it.
+> The bill passed the Senate first, was amended in the House, passed there, then went back to the Senate for concurrence on the House amendment, which passed by a wide margin (43-4). This pattern — strong Senate support both times, more contested in the House — is consistent with the bill picking up broader bipartisan support after the House amendment, though I can't say from vote data alone what that amendment changed (inference, not confirmed by amendment text).
+> 
+> Let me know if you'd like the individual roll-call breakdown by member/party for any of these votes.
 
 ## R1 (relational)
 
@@ -196,9 +188,9 @@ tools: search_bills_semantic, bill_info, bill_sponsors, bill_vote_summary
 
 tools: search_bills
 
-> I found SB 5041 (unemployment insurance benefits for striking or lockout workers), but my only tool is a semantic search over bill digests/titles/status — it does not contain roll-call vote data (individual member votes, party breakdowns, or Yea/Nay counts).
+> My tool only provides bill digests, titles, and status — it does not return roll-call vote data (individual member votes, party breakdowns, or motion-level detail like "3rd Reading & Final Passage" tallies). I cannot retrieve which senators voted Yea or Nay on SB 5041, so I can't answer this question with the tools available.
 > 
-> I cannot retrieve which specific senators voted Nay on the Final Passage vote for SB 5041, including any Democratic senators, because that data isn't available through the tool I have access to. I don't want to guess names or counts, so I can't answer this question reliably. If a vote-data tool becomes available, I'd be able to look up the exact roll call for you.
+> If you have access to a roll-call vote lookup tool or dataset, that would be needed to answer this specific question accurately.
 
 ### graph — pass
 
@@ -206,10 +198,10 @@ tools: bill_votes
 
 > On the Senate 3rd Reading & Final Passage vote for SB 5041, two Democratic senators voted Nay:
 > 
-> - **Mike Chapman** (D-Senate)
-> - **Lisa Wellman** (D-Senate)
+> - **Mike Chapman (D-Senate)**
+> - **Lisa Wellman (D-Senate)**
 > 
-> All other Nay votes on this motion came from Republican senators.
+> All other Nay votes on that motion came from Republican senators.
 
 ## R2 (relational)
 
@@ -221,19 +213,21 @@ tools: bill_votes
 
 tools: search_bills
 
-> I don't have access to sponsor lists or roll-call vote data for individual members through my tools — the search_bills tool only returns bill id, title, digest, and status (as shown above for SB 5041). It does not provide cosponsor names or vote records.
+> I don't have tool access to cosponsor lists or roll-call vote data — my only tool searches bill digests (title, summary, status), which don't include sponsor names or individual member votes. I can confirm SB 5041 exists ("AN ACT Relating to unemployment insurance benefits for striking or lockout workers," enacted as C 352 L 25), but I cannot retrieve who cosponsored it or how any specific member voted on final passage.
 > 
-> Because of this limitation, I can't determine which cosponsors of SB 5041 (if any) voted against it on final passage. I don't want to guess member names or vote outcomes without supporting data. If you have access to a roll-call vote source or sponsor list, I'd be happy to help analyze it once that information is available.
+> To answer this accurately, you'd need a source with the bill's sponsor list and the roll-call record for its final passage vote — neither of which my current tools expose. I'd rather flag that gap than guess at member names or vote outcomes.
 
 ### graph — pass
 
 tools: bill_sponsors, bill_votes
 
-> Cross-referencing the cosponsor list with the "Nay" votes on final passage of SB 5041, one cosponsor voted against the bill despite having cosponsored it:
+> Based on the roll call for SB 5041's final passage motions (3rd Reading & Final Passage, and Final Passage as Recommended by Conference Committee), one cosponsor voted against the bill:
 > 
-> - **Lisa Wellman (D-Senate)** — voted Nay on both "3rd Reading & Final Passage" and "Final Passage as Recommended by Conference Committee."
+> - **Lisa Wellman (D-Senate)** — voted Nay on both final passage motions, despite being listed as a cosponsor.
 > 
-> None of the other listed cosponsors (Riccelli, Conway, Hasegawa, Saldaña, Salomon, Stanford, Dhingra, Nobles, Trudeau, Valdez, Bateman, Lovelett, Cleveland, Frame, Orwall, Pedersen, Slatter, Wilson) appear among the Nay votes.
+> All other cosponsors (Steve Conway, Bob Hasegawa, Rebecca Saldaña, Jesse Salomon, Derek Stanford, Manka Dhingra, T'wina Nobles, Yasmin Trudeau, Javier Valdez, Jessica Bateman, Liz Lovelett, Annette Cleveland, Noel Frame, Tina Orwall, Jamie Pedersen, Vandana Slatter, and Claire Wilson) voted Yea on final passage.
+> 
+> Note: This dataset lists no House cosponsors for SB 5041 (all cosponsors are Senate members), so the House final-passage votes on this bill aren't relevant to the cosponsor question.
 
 ## R3 (relational)
 
@@ -245,25 +239,27 @@ tools: bill_sponsors, bill_votes
 
 tools: search_bills
 
-> My tool only provides bill digests, titles, and status (semantic search over bill text) — it does not return roll-call vote data, sponsor lists, or individual member votes. I can confirm that HB 2049 exists ("Investing in the state's paramount duty to fund K-12 education and build strong and safe communities," status: C 404 L 25), but I have no way to retrieve who voted Yea/Nay on its final passage, let alone break that down by party.
+> I found the bill itself, but my only tool is `search_bills`, which returns bill metadata (id, title, digest, status) — it does not provide roll-call vote data, sponsor lists, or individual member votes.
 > 
-> I can't answer which Democrats voted Nay on HB 2049's House final passage — that data isn't accessible with my current tools. If a roll-call vote lookup tool becomes available, I'd be able to answer this precisely.
+> I cannot retrieve who voted Yea/Nay on HB 2049's House final passage, or identify any Democrats who voted Nay, because that data isn't accessible through the tools available to me. I don't have a way to pull roll-call records, so I won't guess at member names or vote counts.
+> 
+> If you have access to a roll-call/vote-data tool or dataset, that would be needed to answer this specific question accurately.
 
 ### graph — pass
 
 tools: bill_info, bill_votes
 
-> On the House Final Passage vote for HB 2049 ("Investing in the state's paramount duty to fund K-12 education..."), the following Democrats voted **Nay**:
+> On the House final passage vote (3rd Reading & Final Passage) for HB 2049, the Democrats who voted Nay were:
 > 
-> - Adison Richards (D)
-> - Shelley Kloba (D)
-> - Dave Paul (D)
-> - Mari Leavitt (D)
-> - Melanie Morgan (D)
-> - Alicia Rule (D)
-> - Joe Timmons (D)
-> - Clyde Shavers (D)
-> - Adam Bernbaum (D)
+> - Adison Richards (D-House)
+> - Shelley Kloba (D-House)
+> - Dave Paul (D-House)
+> - Mari Leavitt (D-House)
+> - Melanie Morgan (D-House)
+> - Alicia Rule (D-House)
+> - Joe Timmons (D-House)
+> - Clyde Shavers (D-House)
+> - Adam Bernbaum (D-House)
 > 
 > All other Nay votes on this motion came from Republican members.
 
@@ -277,20 +273,31 @@ tools: bill_info, bill_votes
 
 tools: search_bills
 
-> I don't have access to sponsor lists or roll-call vote details for individual bills through my available tools—my search only returns bill title, digest, and status (HB 1620, "Concerning limitations in parenting plans," status: C 166 L 25). I cannot retrieve the list of sponsors or the individual Yea/Nay votes on final passage, so I cannot determine whether any sponsor voted against it.
+> My tool only returns bill digest/status/title/score — it does not provide sponsor lists or roll-call vote data for HB 1620. I cannot retrieve sponsor names or the final passage vote breakdown from this dataset, so I can't confirm whether any sponsor voted against it on final passage.
 > 
-> If you have access to the legislature's roll-call vote records or sponsor list, I'd be happy to help analyze that data if you provide it.
+> If you have access to a roll-call or sponsor lookup source, that would be needed to answer this accurately. I don't want to guess member names or vote outcomes without tool support.
 
 ### graph — pass
 
-tools: bill_sponsors, bill_votes
+tools: bill_info, bill_sponsors, bill_votes
 
-> Yes. Two of HB 1620's own sponsors voted "Nay" on final passage:
+> Looking at the roll calls for **HB 1620**, the sponsors are:
 > 
-> - **Roger Goodman (D-House)** — cosponsor, voted Nay on "3rd Reading & Final Passage"
-> - **Natasha Hill (D-House)** — cosponsor, voted Nay on "3rd Reading & Final Passage"
+> - Jamila Taylor (D) [primary]
+> - Roger Goodman (D) [cosponsor]
+> - Julia Reed (D) [cosponsor]
+> - Natasha Hill (D) [cosponsor]
 > 
-> The primary sponsor, Jamila Taylor (D), and cosponsor Julia Reed (D) are not listed among the Nay votes, so it appears they voted Yea (or were not recorded as Nay).
+> Two "Final Passage"-labeled House votes appear in the data: the initial House **"3rd Reading & Final Passage"** and, after Senate amendments, the House vote on **"Final Passage as Amended by the Senate"** (the vote that actually sent the bill to the Governor).
+> 
+> - **Jamila Taylor**: Yea on both.
+> - **Julia Reed**: Yea on both.
+> - **Roger Goodman**: **Nay** on the original House "3rd Reading & Final Passage," then **Yea** on "Final Passage as Amended by the Senate."
+> - **Natasha Hill**: **Nay** on the original House "3rd Reading & Final Passage," then **Yea** on "Final Passage as Amended by the Senate."
+> 
+> So yes — two sponsors, **Roger Goodman** and **Natasha Hill**, voted against HB 1620 on its first House final-passage vote, but both switched to Yea on the later House vote concurring in the Senate's amended version, which was the vote that ultimately sent the bill to become law (C 166 L 25).
+> 
+> Inference: the flip from Nay to Yea between the two House votes suggests the Senate amendments addressed whatever concern led Goodman and Hill to vote no initially — but I can't confirm the amendment's content or their motive from this data; that would require reading the amendment text (background knowledge not available through these tools).
 
 ## H1 (hybrid)
 
@@ -302,22 +309,30 @@ tools: bill_sponsors, bill_votes
 
 tools: search_bills, search_bills
 
-> The search tool only returns bill digests (title, summary, status) — it does not provide roll-call vote data, vote counts, or member-level voting records. This means I cannot retrieve the actual Senate final passage vote tally for **HB 1217** ("AN ACT Relating to improving housing stability for tenants... limiting rent and fee increases..." — the residential rent stabilization bill, enacted as **C 209 L 25**).
+> The search tool only retrieves bill digests/titles/status, not roll-call vote data. I was able to identify the bill but cannot retrieve the actual Senate final passage vote tally through my available tools.
 > 
-> I can confirm HB 1217 is the major rent stabilization bill you're asking about, but I do not have access to a tool that returns roll-call vote breakdowns (Yea/Nay counts by chamber), so I can't tell you how close the Senate final passage vote was. If you have a tool or source for roll-call data, I'd be happy to analyze it.
+> **What I can confirm:**
+> 
+> **HB 1217** is the major bill on residential rent stabilization — "AN ACT Relating to improving housing stability for tenants subject to the residential landlord-tenant act and the manufactured/mobile home landlord-tenant act by limiting rent and fee increases, requiring notice of rent and fee increases, limiting fees and deposits, establishing a landlord resource center and associated services, authorizing tenant lease termination, creating parity between lease types, and providing for attorney general enforcement." It was enacted (status: C 209 L 25).
+> 
+> **What I cannot confirm:**
+> My search tool only returns bill digests, titles, and status — it does not expose roll-call vote data (yea/nay counts, member votes, or motion labels like "Final Passage"). I do not have a way to query vote tallies directly, so I cannot report how close the Senate final passage vote on HB 1217 was, or which senators voted which way.
+> 
+> If you have access to a separate roll-call/vote lookup tool or dataset, I'd need that to answer the "how close was the vote" question accurately. I don't want to guess a vote count or margin without grounding it in actual data.
 
 ### graph — pass
 
 tools: search_bills_semantic, bill_vote_summary
 
-> The major bill on residential rent stabilization is **HB 1217** ("Improving housing stability for tenants... by limiting rent and fee increases..."), which became law as Chapter 209, Laws of 2025.
+> **HB 1217** — "AN ACT Relating to improving housing stability for tenants... by limiting rent and fee increases..." (the rent stabilization bill; became law as Ch. 209, L. 25) is the bill you're asking about.
 > 
-> **Senate final passage vote** (Final Passage as Recommended by Conference Committee, April 27, 2025):
-> - **Yea: 27**
-> - **Nay: 20**
-> - **Excused: 1**
+> **Senate final passage vote:**
+> The bill passed the Senate twice on "Final Passage" motions, since it went through a conference committee:
 > 
-> This was a fairly narrow margin — the bill passed the Senate by just 7 votes. (Note: an earlier Senate vote on its own amended version, "3rd Reading & Final Passage as Amended by the Senate" on April 10, 2025, was 29 Yea–20 Nay, but the decisive vote sending the bill to the Governor was the conference-committee version, 27–20.)
+> 1. **3rd Reading & Final Passage as Amended by the Senate** (2025-04-10): **Yea 29 – Nay 20** — a 9-vote margin.
+> 2. **Final Passage as Recommended by Conference Committee** (2025-04-27) — the decisive, final Senate vote that sent the bill to the Governor: **Yea 27 – Nay 20 – Excused 1** — a **7-vote margin** in a 48-member chamber.
+> 
+> So the bill's decisive Senate vote was fairly close for a chamber of 48: 27–20, with just a 7-vote cushion (well short of a supermajority, but enough for simple-majority passage). The margin actually narrowed slightly between the initial Senate passage (29-20) and the final conference-report vote (27-20), suggesting (inference, based on the vote-count shift) a couple of senators who'd backed the original Senate version did not support the conference committee's final version — though the specific individuals and reasons aren't available from vote summaries alone.
 
 ## H2 (hybrid)
 
@@ -329,23 +344,28 @@ tools: search_bills_semantic, bill_vote_summary
 
 tools: search_bills
 
-> I found the bills most directly related to the capital gains tax (HB 1376, SB 5314, SB 5813), but my only tool is `search_bills`, which returns just the bill ID, title, digest, and status — it does not return sponsor lists, cosponsor information, or roll-call vote data.
+> My tool only returns bill titles, digests, status, and a relevance score — it does not provide sponsor lists, cosponsor information, or roll-call vote data. I cannot retrieve which members cosponsored a bill or how they voted on final passage through this search interface.
 > 
-> I cannot retrieve information on who cosponsored these bills or how individual legislators voted on final passage, because no tool available to me exposes sponsor rosters or member-level vote records. As a result, I'm unable to determine whether any Republican cosponsored a capital gains tax bill and then voted against it on final passage — I don't have the data access needed to verify that claim, and I don't want to guess names or vote outcomes.
+> Based on the search, the capital gains tax bills most relevant to your question appear to be:
+> - **HB 1376** – prepayment of capital gains taxes
+> - **SB 5314** – modifying the capital gains tax (loopholes, credits, technical corrections)
+> - **SB 5813** – creating a more progressive rate structure for the capital gains tax and estate tax
 > 
-> If a tool for retrieving bill sponsors and roll-call votes becomes available, I could answer this precisely.
+> However, I have no way to pull cosponsor lists or roll-call vote records for these bills with the tools available to me, so I cannot confirm or deny whether any Republican cosponsored one of these and then voted against it on final passage. I don't want to guess member names or vote outcomes, as that would risk stating unsupported claims.
+> 
+> If you have access to a tool or dataset that lists bill sponsors and individual roll-call votes, that would be needed to answer this specific question accurately.
 
 ### graph — pass
 
 tools: search_bills_semantic, bill_sponsors, bill_sponsors, bill_sponsors, bill_votes, bill_votes
 
-> Yes. On **SB 5314** ("Modifying the capital gains tax"), Senator **Paul Harris (R)** was a listed cosponsor, but he voted **Nay** on both final-passage motions ("3rd Reading & Final Passage" and "Final Passage as Amended by the House").
+> Yes. **SB 5314** ("Modifying the capital gains tax") had **Paul Harris (R)** as a cosponsor, but he voted **Nay** on both final-passage motions in the Senate — "3rd Reading & Final Passage" and "Final Passage as Amended by the House."
 > 
-> For comparison, the other capital-gains-related bill with Republican involvement, **HB 1376** ("prepayment of capital gains taxes six months prior to the due date"), was actually a Republican-sponsored bill (primary sponsor Ed Orcutt, R, with cosponsors Mark Klicker, Cyndy Jacobsen, John Ley, and Andrew Barkis, all R) — all of those cosponsors voted **Yea** on final passage, so no defection there.
+> For context on the other capital-gains-related bills I checked:
+> - **HB 1376** (prepayment of capital gains taxes) was sponsored entirely by Republicans (Ed Orcutt, Mark Klicker, Cyndy Jacobsen, John Ley, Andrew Barkis), and all of them voted Yea on final passage — no flip there.
+> - **SB 5813** (progressive rate structure for capital gains/estate tax) had only Democratic sponsors, so it doesn't fit the question.
 > 
-> **SB 5813** (progressive capital gains/estate tax rate structure) had no Republican cosponsors.
-> 
-> So the only case of a Republican cosponsoring a capital-gains-tax bill and then voting against it on final passage is Paul Harris on SB 5314.
+> So among the capital-gains bills searched, SB 5314 is the one where a Republican cosponsor (Paul Harris) voted against the bill on final passage.
 
 ## H3 (hybrid)
 
@@ -355,36 +375,36 @@ tools: search_bills_semantic, bill_sponsors, bill_sponsors, bill_sponsors, bill_
 
 ### control — FAIL
 
-tools: search_bills
+tools: search_bills, search_bills, search_bills
 
-> I found two bills clearly about artificial intelligence:
+> I identified two bills clearly about artificial intelligence that appear to have passed into law this biennium:
 > 
-> - **HB 1170** – "Informing users when content is developed or modified by artificial intelligence" (status: C 167 L 26 — enacted)
-> - **HB 2225** – "Regulating artificial intelligence companion chatbots" (status: C 168 L 26 — enacted)
+> - **HB 1170** – "Informing users when content is developed or modified by artificial intelligence" (status: C 167 L 26 — chaptered into law)
+> - **HB 2225** – "Regulating artificial intelligence companion chatbots" (status: C 168 L 26 — chaptered into law)
 > 
-> However, I'm unable to report on which of these had **contested (non-unanimous) final passage votes** or give **House tallies**, because my only available tool (`search_bills`) returns just bill ID, title, digest, and status — it does not provide roll-call vote data, vote counts, or motion-level detail (e.g., "Final Passage" tallies). I don't have a tool to look up individual member votes or chamber tallies, so I can't verify or guess at the numbers.
+> However, I cannot report which final-passage votes were contested or give you the House tallies. My only tool (`search_bills`) returns bill id, title, digest, status, and a relevance score — it does not expose roll-call vote data (motions, yea/nay counts, or individual member votes) for any bill, including these two. I have no other tool to query vote records.
 > 
-> If you have access to a vote-lookup tool or can share vote data, I can help analyze it. Otherwise, based on current tools, I can only confirm these two bills as AI-related and enacted, not the contested nature of their final passage votes or the specific House tallies.
+> So, plainly: I can confirm HB 1170 and HB 2225 are the AI-related bills that reached enactment, but I cannot tell you whether their final passage votes were unanimous or contested, nor provide House tallies, because that data isn't retrievable with the tools available to me. If you have access to the Washington Legislature's roll-call records (or a tool that surfaces them), that would be the place to confirm vote counts for these two bills.
 
 ### graph — pass
 
-tools: search_bills_semantic, search_bills_semantic, search_bills_semantic, bill_votes, bill_votes, bill_vote_summary, bill_vote_summary
+tools: search_bills_semantic, search_bills_semantic, search_bills_semantic, bill_vote_summary, bill_vote_summary
 
-> Both AI-related bills in the WA 2025-26 biennium had contested (non-unanimous) final passage votes in the House:
+> Based on my search, two bills clearly about artificial intelligence reached floor votes: **HB 1170** and **HB 2225**. Both had contested (non-unanimous) Final Passage votes in the House.
 > 
-> **HB 1170** — "Informing users when content is developed or modified by artificial intelligence"
-> - House "3rd Reading & Final Passage" (2026-02-13): **56 Yea – 37 Nay – 5 Excused**
-> - House "Final Passage as Amended by the Senate" (2026-03-11): **55 Yea – 38 Nay – 5 Excused**
-> - (Senate final passage was 46-3, also contested but far more lopsided.)
+> **HB 1170** — "Informing users when content is developed or modified by artificial intelligence" (now C 167 L 26)
+> - House, 3rd Reading & Final Passage (2026-02-13): **56 Yea – 37 Nay – 5 Excused**
+> - House, Final Passage as Amended by the Senate (2026-03-11): **55 Yea – 38 Nay – 5 Excused**
+> - (For context, the Senate final passage was 46 Yea – 3 Nay, much less contested.)
 > 
-> **HB 2225** — "Regulating artificial intelligence companion chatbots"
-> - House "3rd Reading & Final Passage" (2026-02-17): **69 Yea – 28 Nay – 1 Excused**
-> - House "Final Passage as Amended by the Senate" (2026-03-11): **74 Yea – 21 Nay – 3 Excused**
-> - (Senate final passage was 43-5.)
+> **HB 2225** — "Regulating artificial intelligence companion chatbots" (now C 168 L 26)
+> - House, 3rd Reading & Final Passage (2026-02-17): **69 Yea – 28 Nay – 1 Excused**
+> - House, Final Passage as Amended by the Senate (2026-03-11): **74 Yea – 21 Nay – 3 Excused**
+> - (Senate final passage was 43 Yea – 5 Nay – 1 Excused.)
 > 
-> Both votes broke largely along party lines, with most Republicans voting Nay on HB 1170 and a smaller but still substantial bloc opposing HB 2225 (e.g., Jim Walsh, Matt Marshall, Andrew Barkis, Jenny Graham voting Nay on both bills in both House votes).
+> Both bills passed the House twice — once on initial passage and again to concur in Senate amendments — and both votes were contested each time, though HB 1170 was notably closer (roughly 3:2 margin) than HB 2225 (roughly 3:1 or better).
 > 
-> I searched using semantic queries for "artificial intelligence," "automated decision system/algorithm regulation," and "AI in government/employment," and these two bills were the only ones clearly centered on AI regulation that reached House floor votes. I don't have a comprehensive keyword/tag index, so if there are other AI-related bills not surfaced by these searches, I can't confirm their absence with certainty — but these two account for the AI bills that appeared repeatedly across all queries.
+> If you'd like, I can pull the individual roll-call breakdown (who voted Yea/Nay, by party) for either bill.
 
 ## H4 (hybrid)
 
@@ -396,38 +416,34 @@ tools: search_bills_semantic, search_bills_semantic, search_bills_semantic, bill
 
 tools: search_bills
 
-> I found the bill: **HB 1515** – "AN ACT Relating to modernizing the regulation of alcohol service in public spaces" (this is the bill about allowing alcohol service in public places; it was enacted as C 361 L 25).
+> HB 1515 ("AN ACT Relating to modernizing the regulation of alcohol service in public spaces") is the bill you're referring to.
 > 
-> However, I'm unable to provide the list of Democrats who voted Nay on its House final passage. My only available tool (`search_bills`) returns bill title, digest, and status — it does not provide roll-call vote data or member-level voting records. I don't have a tool that can retrieve individual legislator votes, so I can't ground a list of "Nay" voters in actual data.
+> However, my search tool only returns bill metadata (title, digest, status) — it does not give me access to roll-call vote data, so I cannot retrieve the actual House final passage vote or identify which members, including Democrats, voted Nay on it. I don't have a tool that returns individual legislator votes, so I can't answer that part of your question reliably.
 > 
-> If you have access to a roll-call/vote-lookup tool, I'd be glad to use it — but with what's available to me now, I can only confirm the bill itself, not the vote breakdown.
+> If you have access to a roll-call/vote lookup tool or can point me to one, I can cross-reference it with HB 1515's House final passage motion to identify the Nay votes by party.
 
 ### graph — pass
 
 tools: search_bills_semantic, bill_votes
 
-> **Bill:** HB 1515 – "Modernizing the regulation of alcohol service in public spaces" (enacted as C 361 L 25).
+> HB 1515 ("modernizing the regulation of alcohol service in public spaces") had **two** House votes labeled with "Final Passage" — an initial passage vote ("3rd Reading & Final Passage") and a later concurrence vote after Senate amendments ("Final Passage as Amended by the Senate"). Here are the Democrats who voted Nay in each:
 > 
-> HB 1515 had two House final-passage votes: the original **3rd Reading & Final Passage** and, after Senate amendments, a **Final Passage as Amended by the Senate** vote (the decisive vote that sent it to the Governor).
+> **3rd Reading & Final Passage (original House passage) — Democrats voting Nay:**
+> - Timm Ormsby
+> - Steve Bergquist
+> - Lisa Callan
+> - Mari Leavitt
+> - Lauren Davis
 > 
-> **Democrats who voted Nay:**
+> **Final Passage as Amended by the Senate (House concurrence vote) — Democrats voting Nay:**
+> - Sharon Tomiko Santos
+> - Roger Goodman
+> - Cindy Ryu
+> - Gerry Pollet
+> - Steve Bergquist
+> - Lisa Callan
+> - Mari Leavitt
+> - Lauren Davis
+> - Janice Zahn
 > 
-> *3rd Reading & Final Passage (original House vote):*
-> - Timm Ormsby (D)
-> - Steve Bergquist (D)
-> - Lisa Callan (D)
-> - Mari Leavitt (D)
-> - Lauren Davis (D)
-> 
-> *Final Passage as Amended by the Senate (final concurrence vote):*
-> - Sharon Tomiko Santos (D)
-> - Roger Goodman (D)
-> - Cindy Ryu (D)
-> - Gerry Pollet (D)
-> - Steve Bergquist (D)
-> - Lisa Callan (D)
-> - Mari Leavitt (D)
-> - Lauren Davis (D)
-> - Janice Zahn (D)
-> 
-> If you consider the "decisive" House final passage to be the concurrence vote (Final Passage as Amended by the Senate), the Democrats voting Nay were: **Sharon Tomiko Santos, Roger Goodman, Cindy Ryu, Gerry Pollet, Steve Bergquist, Lisa Callan, Mari Leavitt, Lauren Davis, and Janice Zahn.**
+> Note that several Republicans also voted Nay in both motions (e.g., Tom Dent, Mary Dye, Mike Volz, Jim Walsh, Chris Corry, Joel McEntire, Peter Abbarno, Cyndy Jacobsen, Stephanie Barnard, Kevin Waters), but you asked specifically for the Democrats, listed above.
